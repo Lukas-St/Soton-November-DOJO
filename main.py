@@ -47,14 +47,14 @@ def generateRandomWidths():
         width = random.random()
         widths.append(width)
 
-    # Random width constituancies
+    # Random width constituencies
     newWidths = []
     for w in widths:
         n = int(math.floor(w * 100 / sum(widths)))
         newWidths.append(n)
     newWidths[4] += 100 - sum(newWidths)
 
-    # Cumulative widths corresponding to start-index of constituancy
+    # Cumulative widths corresponding to start-index of constituency
     indices = []
     for i in range(0, 10):
         mySum = 0
@@ -71,15 +71,15 @@ the_winner = 1
 # While our desired winner isn't winning
 while not (the_winner == desired_winner):
     widths, indices = generateRandomWidths()
-    winners = []  # The winners of each constituancy
+    winners = []  # The winners of each constituency
 
-    # For each constituancy, count the votes, find the winner
+    # For each constituency, count the votes, find the winner
     for i, w in enumerate(widths):
         redVotes, blueVotes = countVotes(matrix, indices[i], w)
         constit_winner = winner(redVotes, blueVotes)
         winners.append(constit_winner)
 
-    # The winner is whoever had more constituancies
+    # The winner is whoever had more constituencies
     nRed = winners.count(1)
     nBlue = winners.count(2)
     if nRed > nBlue:
@@ -89,7 +89,7 @@ while not (the_winner == desired_winner):
     else:
         the_winner = 3  # A tie
 
-# Populate the constituancy matrix
+# Populate the constituency matrix
 for i, w in enumerate(widths):
     for y in range(0, 100):
         for x in range(indices[i], indices[i]+w):
