@@ -95,9 +95,9 @@ for i, w in enumerate(widths):
         for x in range(indices[i], indices[i]+w):
             constit[y][x] = i
 
-# Print the constituancy matrix
+output = open('output.txt', 'w')
 for y in range(100):
     string = ""
     for x in range(100):
         string += str(constit[y][x])
-    print string
+    output.write(string + '\n')
