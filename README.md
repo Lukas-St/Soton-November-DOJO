@@ -6,6 +6,14 @@ A Python script for '[Gerrymandering](https://en.wikipedia.org/wiki/Gerrymanderi
 
 It finds a solution via brute force methods. Randomly generates vertical-band-shaped constituancies, until the chosen side holds the majority.
 
+## Example input
+
+![alt tag](https://raw.github.com/Lukas-St/Soton-November-DOJO/master/example/input.png)
+
+## Example input
+
+![alt tag](https://raw.github.com/Lukas-St/Soton-November-DOJO/master/example/output.png)
+
 Authors:
 * [Lukas-St](https://github.com/Lukas-St)
 * [rprince](https://github.com/rprince)

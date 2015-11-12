@@ -3,12 +3,12 @@ import math
 
 
 def load_file():
-    input_file = open('DOJO Input string.txt', 'r')
+    input_file = open('input.txt', 'r')
     Votes = []
     for i in range(0, 100):
         line = input_file.readline().rstrip()
         Votes.append([])
-        for j in range(0, 99):
+        for j in range(0, 100):
             Votes[i].append(line[j])
         # Votes[i] = Votes[i].rstrip()
     return (Votes)
@@ -79,7 +79,7 @@ while not (the_winner == desired_winner):
         constit_winner = winner(redVotes, blueVotes)
         winners.append(constit_winner)
 
-    # The winner is whoever had more constituencies
+    # The overall winner is whoever had more constituencies
     nRed = winners.count(1)
     nBlue = winners.count(2)
     if nRed > nBlue:
