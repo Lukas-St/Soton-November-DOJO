@@ -10,7 +10,7 @@ It finds a solution via brute force methods. Randomly generates vertical-band-sh
 
 ![alt tag](https://raw.github.com/Lukas-St/Soton-November-DOJO/master/example/input.png)
 
-## Example input
+## Example output
 
 ![alt tag](https://raw.github.com/Lukas-St/Soton-November-DOJO/master/example/output.png)
 
