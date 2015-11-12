@@ -1,3 +1,5 @@
+import sys
+
 def load_file():
 	input_file = open('DOJO Input string.txt', 'r')
 	Votes = []
@@ -10,9 +12,11 @@ def load_file():
 	return (Votes)
 
 def print_result(Votes):
-	for i in range(0, 100):
-		print (Votes[i])
+	for i in range(0, 99):
+		for j in range(0, 99):
+			sys.stdout.write(Votes[i][j])
+		print ""
 
 v = load_file()
-type(v[1][1])
+#print(v)
 print_result(v)
